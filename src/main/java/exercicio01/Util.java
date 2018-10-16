@@ -18,14 +18,14 @@ public class Util {
      * intervalo.
      */
     public int gerarNumeroAleatorio(int inicio, int fim) {
-        if (fim < 0) {
+        if (inicio < 0 || fim < 0) {
             return -1;
         }
 
         if (inicio >= fim) {
             return -1;
         }
-        int diff = inicio - fim + 1;
+        int diff = fim - inicio + 1;
         Random random = new Random();
 
         int tInt = random.nextInt(diff); //esse método retorna um número aleatorio 
